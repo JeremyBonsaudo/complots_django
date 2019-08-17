@@ -17,3 +17,9 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'app/register.html', {'form': form})
+
+
+@login_required
+def game(request):
+    users = User.objects.all()
+    return render(request, 'app/game.html', {'Users': users})

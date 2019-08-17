@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complots</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            {% for users in Users %}
+                <div class="col">{{users}}</div>
+            {% endfor %}
+        </div>
+        <div>
+            <a href="{% url 'logout' %}">Log Out</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

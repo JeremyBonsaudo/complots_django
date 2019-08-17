@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'complot.wsgi.application'
+ASGI_APPLICATION = 'complot.routing.application'
 
 
 # Database
@@ -123,5 +125,5 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'app-complot'
+LOGIN_REDIRECT_URL = 'app-game'
 LOGIN_URL = 'login'
