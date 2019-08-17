@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'app.apps.AppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'channels',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +71,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'complot.wsgi.application'
-ASGI_APPLICATION = 'complot.routing.application'
+ASGI_APPLICATION = 'routing.application'
 
 
 # Database
@@ -125,5 +125,5 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'app-game'
+LOGIN_REDIRECT_URL = 'app-room'
 LOGIN_URL = 'login'
